@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="static/css/style.css">
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.8.0/firebaseui.js"></script>
+    
+   <script src="js/authcheck.js" defer></script>
+
+</head>
+<body>
+   <header class="header">
+      <section class="flex">
+         <a href="home.html" class="logo">DualCure</a>
+   
+        
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+   
+         <div class="profile">
+            <img src="static/images/pic-6.jpg" class="image" alt="">
+            <h3 class="name">John</h3>
+            <p class="role">User</p>
+            <a href="profile.html" class="btn">Hey User!!</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">login</a>
+               <a href="register.html" class="option-btn">register</a>
+            </div>
+         </div>
+   
+      </section>
+   </header>   
+   
+   <div class="side-bar">
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+   
+      <div class="profile" id="userp">
+         <img src="static/images/pic-6.jpg" class="image" alt="">
+         <h3 class="name">John</h3>
+         <p class="role">User</p>
+         <a href="profile.html" class="btn">Hey User!!</a>
+      </div>
+   
+      <nav class="navbar">
+         <a href="{{ url_for('home') }}"><i class="fas fa-home"></i><span>Home</span></a>
+         <a href="{{ url_for('about') }}"><i class="fas fa-question"></i><span>About</span></a>
+         <a href="{{ url_for('courses') }}"><i class="fas fa-graduation-cap"></i><span>Report</span></a>
+         <a href="{{ url_for('virtual_class') }}"><i class="fas fa-play"></i><span>Ayurveda</span></a>
+         <a href="{{ url_for('teachers') }}"><i class="fas fa-chalkboard-user"></i><span>Chatbot</span></a>
+         <a href="{{ url_for('contact') }}"><i class="fas fa-headset"></i><span>Contact us</span></a>
+      </nav>
+      </nav>
+   </div>
+
+<section class="about">
+
+   <div class="row">
+
+      <div class="image">
+         <img src="static/images/image.png" alt="">
+      </div>
+
+      <div class="content">
+         <h3>DualCure</h3>
+         <h2>Your Path to Wellness: From Plants to Prescriptions.   </h2>
+         <p><b>Welcome to DualCare, your trusted guide on the journey to holistic health. At DualCare, we believe in a balanced approach, combining the power of natural remedies with modern medicine. From plant-based therapies to prescription solutions, we provide the resources you need to make informed choices for your well-being. Your path to wellness starts here.</b></p>
+
+      </div>
+
+   </div>
+
+   <div class="box-container">
+
+      <div class="box">
+         <i class="fas fa-graduation-cap"></i>
+         <div>
+            <h3>+10k visitors</h3>
+         </div>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-user-graduate"></i>
+         <div>
+            <h3>Pharmacy Care</h3>
+         </div>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-chalkboard-user"></i>
+         <div>
+            <h3>User friendly</h3>
+         </div>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-briefcase"></i>
+         <div>
+            <h3>Chatbot assistance</h3>
+           
+         </div>
+      </div>
+
+   </div>
+
+</section> 
+
+<section class="reviews">
+
+   <h1 class="heading">student's reviews</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <p>DualCure Healthcare is fantastic! The symptom checker is quick and accurate, offering natural remedies based on medicinal plants. I loved how easy it was to generate a personalized medical report—super helpful for holistic treatment. Highly recommend!"</p>
+         <div class="student">
+            <img src="images/pic-2.jpg" alt="">
+            <div>
+               <h3>Michael, 18, High School Student</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Amazing platform! DualCure gave me detailed plant-based remedies just by entering my symptoms. The medical report feature is a great bonus. It's now my go-to for natural healthcare solutions.</p>
+         <div class="student">
+            <img src="images/pic-3.jpg" alt="">
+            <div>
+               <h3>Sarah, 22, Engineering Student</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>DualCure makes holistic healthcare so easy! The symptom checker was spot-on, and I instantly got a medical report with natural remedies. I trust it for quick, reliable advice.</p>
+         <div class="student">
+            <img src="images/pic-4.jpg" alt="">
+            <div>
+               <h3>Jason, 23, Full Stack Developer</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>I love how DualCure blends technology and natural medicine. The symptom tool is simple yet effective, and the detailed reports make it easy to explore alternative treatments. Highly recommended!</p>
+         <div class="student">
+            <img src="images/pic-5.jpg" alt="">
+            <div>
+               <h3>Emma, 25, Web Developer</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Using DualCure was a breeze! The interface is user-friendly, and I was able to get personalized plant remedies in no time. The medical report feature is a must-try for anyone into natural healing.</p>
+         <div class="student">
+            <img src="images/pic-6.jpg" alt="">
+            <div>
+               <h3>Alex, 22, Junior Developer</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>DualCure is a lifesaver! The platform quickly suggested medicinal plants based on my symptoms, and the detailed medical report gave me peace of mind. It's perfect for anyone seeking natural treatments</p>
+         <div class="student">
+            <img src="images/pic-7.jpg" alt="">
+            <div>
+               <h3>Sophie, 27, Software Engineer</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>TOPG</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="static/css/style.css">
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.8.0/firebaseui.js"></script>
+    
+   <script src="js/authcheck.js" defer></script>
+
+</head>
+<body>
+   <header class="header">
+      <section class="flex">
+         <a href="home.html" class="logo">DualCure</a>
+   
+        
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+   
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">John</h3>
+            <p class="role">User</p>
+            <a href="profile.html" class="btn">Hey User!!</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">login</a>
+               <a href="register.html" class="option-btn">register</a>
+            </div>
+         </div>
+   
+      </section>
+   </header>   
+   
+   <div class="side-bar">
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+   
+      <div class="profile" id="userp">
+         <img src="static/images/pic-6.jpg" class="image" alt="">
+         <h3 class="name">John</h3>
+         <p class="role">User</p>
+         <a href="profile.html" class="btn">Hey User!!</a>
+      </div>
+   
+      <nav class="navbar">
+         <a href="{{ url_for('home') }}"><i class="fas fa-home"></i><span>Home</span></a>
+         <a href="{{ url_for('about') }}"><i class="fas fa-question"></i><span>About</span></a>
+         <a href="{{ url_for('courses') }}"><i class="fas fa-graduation-cap"></i><span>Report</span></a>
+         <a href="{{ url_for('virtual_class') }}"><i class="fas fa-play"></i><span>Ayurveda</span></a>
+         <a href="{{ url_for('teachers') }}"><i class="fas fa-chalkboard-user"></i><span>Chatbot</span></a>
+         <a href="{{ url_for('contact') }}"><i class="fas fa-headset"></i><span>Contact us</span></a>
+      </nav>
+   </div>
+
+
+<section class="courses">
+
+   <h1 class="heading">Our Services</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="tutor">
+            <div class="info">
+               <h3>Generating Report</h3>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="static/images/report.png" alt="">
+           
+         </div>
+         <h2>Users can generate a personalized medical report based on their symptoms through our website. This report includes details about potential medicinal plants and remedies tailored to their input.</h2>
+        
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            
+            <div class="info">
+               <h3>Information about Ayurvedic medicines</h3>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="static/images/Ayurveda.jpg" alt="">
+            
+         </div>
+         <h2>Ayurvedic medicines are natural remedies derived from herbs, plants, and minerals. They aim to treat the root cause of ailments while promoting overall wellness.</h2>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+         
+            <div class="info">
+               <h3>Medicinal Chatbot</h3>
+            
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="static/images/chatbot.jpg" alt="">
+         </div>
+         <h2>A medical chatbot is an AI-powered tool designed to provide instant health-related advice and information. It assists users by answering queries, directing them to appropriate healthcare services.</h2>
+      </div>
+
+
+   
